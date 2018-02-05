@@ -31,7 +31,7 @@ public class autoMove extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	Robot.driveTrain.setTankDrive(left, right);
+    	Robot.driveTrain.setTankDrive(left, right, false);
     }
 
     // Make this return true when this Command no longer needs to run execute()

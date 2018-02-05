@@ -44,7 +44,7 @@ public class arcadeDrive extends Command {
     // Called repeatedly when this Command is scheduled to run
     @Override
     protected void execute() {
-    	Robot.driveTrain.getDriveSticks(Robot.oi.getDriver1());
+    	Robot.driveTrain.ArcadeDrive(Robot.oi.getDriver1());
     }
 
     // Make this return true when this Command no longer needs to run execute()
