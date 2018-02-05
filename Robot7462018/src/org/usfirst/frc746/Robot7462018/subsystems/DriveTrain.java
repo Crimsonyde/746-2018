@@ -65,21 +65,14 @@ public class DriveTrain extends Subsystem {
 		robotDrive.arcadeDrive(throttle, 0);
 
 	}
-
-	public void turnRobot(int speed, double turning) {
-		robotDrive.arcadeDrive(speed, turning);
-	}
-
-	public void getTankDrive(Joystick driver) {
-		setTankDrive(-driver.getAxis(AxisType.kTwist), -driver.getAxis(AxisType.kThrottle));
-	}
 	
-	public void reverseTankDrive(Joystick driver) {
-		setTankDrive(driver.getAxis(AxisType.kTwist), driver.getAxis(AxisType.kThrottle));
-	}
-
 	public void setTankDrive(double leftSide, double rightSide) {
 		robotDrive.tankDrive(leftSide, rightSide);
+	}
+		
+
+	public void drive(Joystick driver) {
+		setTankDrive(-driver.getY(), -driver.getAxis(AxisType.kThrottle));
 	}
 }
 
